@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>도미노피자 클론코딩</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./assets/css/reset.css" />
+	<link rel="stylesheet" href="./assets/css/core.min.css" />
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<header id="header">
+			<div class="container">
+				<div class="system-block">
+					<div class="logo">
+						<h1 class="title">
+							<span class="blind">도미노피자</span>
+						</h1>
+					</div>
+					<div class="location">
+						<i class="icon">
+							논현로 123길 35-1
+						</i>
+					</div>
+					<div class="util">
+						<ul>
+							<li><a href="">로그인</a></li>
+							<li><a href="">회원가입</a></li>
+							<li>
+								<select name="" id="">
+									<option value="kor">KOR</option>
+									<option value="eng">ENG</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="gnb-block">
+					<nav class="gnb">
+						<ul>
+							<li><a href="">메뉴</a></li>
+							<li><a href="">e-쿠폰</a></li>
+							<li><a href="">상품권 선물</a></li>
+							<li><a href="">이벤트&middot; 제휴</a></li>
+							<li><a href="">매장검색</a></li>
+						</ul>
+						<a href="#" class="gnb-more-menu">더보기</a>
+					</nav>
+				</div>
+
+			</div>
+		</header>
+
+		<!-- <div class="allmenu">
+			<div class="allmenu-wrap">
+				<div class="right-menu">
+					<div class="menu-box">
+						<ul>
+							<li><a href="">도미노 서비스</a></li>
+							<li><a href="">매니아 혜택</a></li>
+							<li><a href="">도미노 모멘트</a></li>
+							<li><a href="">퀵오더</a></li>
+							<li><a href="">단체주문 서비스</a></li>
+						</ul>
+					</div>
+					<div class="menu-box">
+						<ul>
+							<li><a href="">고객센터</a></li>
+							<li><a href="">자주하는 질문</a></li>
+							<li><a href="">온라인 신문고</a></li>
+						</ul>
+					</div>
+					<div class="menu-box">
+						<ul>
+							<li><a href="">회사소개</a></li>
+							<li><a href="">한국도미노피자</a></li>
+							<li><a href="">공고갤러리</a></li>
+							<li><a href="">사회공헌활동</a></li>
+							<li><a href="">가맹점 모집</a></li>
+							<li><a href="">인재채용</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="notice-menu">
+					<ul>
+						<li><a href="">공지사항</a></li>
+						<li><a href="">도미노뉴스</a></li>
+						<li><a href="">보도자료</a></li>
+					</ul>
+				</div>
+			</div>
+		</div> -->
+
+		<main id="main">
+			<section class="visual-slider main-slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="./assets/images/slider01.jpg" alt="슬라이더 이미지 01"></div>
+						<div class="swiper-slide"><img src="./assets/images/slider02.jpg" alt="슬라이더 이미지 01"></div>
+					</div>
+					<div class="swiper-pagination">
+						<button class="arrows next" aria-label="이전 슬라이더">next</button>
+						<button class="arrows prev" aria-label="다음 슬라이더">prev</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="domino-order">
+				<div class="order-box">
+
+				</div>
+				<div class="order-box"></div>
+				<div class="order-box"></div>
+			</section>
+
+			<section class="domino-event"></section>
+
+		</main>
+		<footer class="footer">
+
+		</footer>
+	</div>
+
+	<script>
+		var visualSlider = new Swiper('.main-slider .swiper-container', {
+			loop:true,
+			navigation:{
+				nextEl:'.main-slider .next',
+				nextEl:'.main-slider .prve'
+			},
+			on: {
+				init: function(swiper){ // 슬라이드가 시작됐을때(초기화 개념)
+					console.log(this);
+				},
+				slideChange:function(){ // 슬라이더가 시작될때 와 끝날때 실행
+					console.log(2);
+				}
+			}
+		});
+	</script>
+
+</body>
+</html>
