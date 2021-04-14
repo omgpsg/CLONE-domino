@@ -22,6 +22,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	color:#000000;
+	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -48,4 +51,8 @@ table {
 }
 img{
 	width:100%
+}
+a{
+	display: block;
+	text-decoration: none;
 }

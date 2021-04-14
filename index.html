@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>도미노피자 클론코딩</title>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./assets/css/reset.css" />
 	<link rel="stylesheet" href="./assets/css/core.min.css" />
+	<link rel="stylesheet" href="./assets/css/mian.css" />
 
 	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
+
 <body>
 	<div id="wrap">
 		<header id="header">
@@ -21,13 +27,12 @@
 				<div class="system-block">
 					<div class="logo">
 						<h1 class="title">
-							<span class="blind">도미노피자</span>
 						</h1>
 					</div>
 					<div class="location">
-						<i class="icon">
+						<a href="#" title="주소검색">
 							논현로 123길 35-1
-						</i>
+						</a>
 					</div>
 					<div class="util">
 						<ul>
@@ -45,12 +50,12 @@
 
 				<div class="gnb-block">
 					<nav class="gnb">
-						<ul>
-							<li><a href="">메뉴</a></li>
-							<li><a href="">e-쿠폰</a></li>
-							<li><a href="">상품권 선물</a></li>
-							<li><a href="">이벤트&middot; 제휴</a></li>
-							<li><a href="">매장검색</a></li>
+						<ul class="gnb-menu-box">
+							<li><a href=""><span>메뉴</span></a></li>
+							<li><a href=""><span>e-쿠폰</span></a></li>
+							<li><a href=""><span>상품권 선물</span></a></li>
+							<li><a href=""><span>이벤트&middot; 제휴</span></a></li>
+							<li><a href=""><span>매장검색</span></a></li>
 						</ul>
 						<a href="#" class="gnb-more-menu">더보기</a>
 					</nav>
@@ -114,14 +119,72 @@
 			</section>
 
 			<section class="domino-order">
-				<div class="order-box">
-
+				<div class="container">
+					<div class="order-box delivery">
+						<a href="#" title="배달주문">
+							<i class="order-ico"></i>
+							<span class="order-tit">배달 주문</span>
+							<span class="order-arrow"></span>
+						</a>
+						<p class="order-txt">등급별 최대 30%</p>
+					</div>
+					<div class="order-box packing">
+						<a href="#" title="포장주문">
+							<i class="order-ico"></i>
+							<span class="order-tit">포장 주문</span>
+							<span class="order-arrow"></span>
+						</a>
+						<p class="order-txt">등급별 최대 40%</p>
+					</div>
+					<div class="order-box quick-order">
+						<a href="#" title="퀵오더">
+							<i class="order-ico"></i>
+							<span class="order-tit">퀵오더</span>
+							<span class="order-arrow"></span>
+						</a>
+						<p class="order-txt">자주 이용하는 메뉴를<br>
+							더 빠르게 주문해보세요!</p>
+					</div>
 				</div>
-				<div class="order-box"></div>
-				<div class="order-box"></div>
 			</section>
 
-			<section class="domino-event"></section>
+			<section class="domino-event">
+				<div class="container">
+					<div class="event-box">
+						<p class="evnt-tit">
+							도미노피자의<br>
+							<strong>특별한 매니아 혜택</strong><br>
+							누려보세요!
+						</p>
+						<div class="event-login-btn">
+							<a href="#" title="로그인">로그인</a>
+						</div>
+					</div>
+					<div class="event-box event-slider-wrap">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide event-slide-img">
+									<img src="./assets/images/main_card1.png" alt="">
+								</div>
+								<div class="swiper-slide event-slide-img">
+									<img src="./assets/images/main_card2.gif" alt="">
+								</div>
+								<div class="swiper-slide event-slide-img">
+									<img src="./assets/images/main_card4-1.gif" alt="">
+								</div>
+								<div class="swiper-slide event-slide-img">
+									<img src="./assets/images/main_card3.png" alt="">
+								</div>
+								<div class="swiper-slide event-slide-img">
+									<img src="./assets/images/main_card5.png" alt="">
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+    						<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+			</section>
 
 		</main>
 		<footer class="footer">
@@ -130,22 +193,39 @@
 	</div>
 
 	<script>
+
 		var visualSlider = new Swiper('.main-slider .swiper-container', {
-			loop:true,
-			navigation:{
-				nextEl:'.main-slider .next',
-				nextEl:'.main-slider .prve'
+			loop: true,
+			autoplay: {
+				delay: 4000,
 			},
-			on: {
-				init: function(swiper){ // 슬라이드가 시작됐을때(초기화 개념)
-					console.log(this);
-				},
-				slideChange:function(){ // 슬라이더가 시작될때 와 끝날때 실행
-					console.log(2);
-				}
-			}
+			speed: 4000,
+			navigation: {
+				nextEl: '.main-slider .next',
+				nextEl: '.main-slider .prve'
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
 		});
+		var visualSlider = new Swiper('.event-box .swiper-container', {
+			loop: true,
+			slidesPerView: 4,
+      		spaceBetween: 5,
+			  navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+
+
 	</script>
 
 </body>
+
 </html>
